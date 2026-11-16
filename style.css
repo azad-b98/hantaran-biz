@@ -1,0 +1,97 @@
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #faf7f2;
+      color: #3b2a25;
+    }
+
+    .font-display {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Horizontal marquee */
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      min-width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Floating animation */
+    .float {
+      animation: floating 5s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    /* Image hover */
+    .image-card img {
+      transition: transform 0.8s ease;
+    }
+
+    .image-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Gold line */
+    .gold-line {
+      width: 70px;
+      height: 2px;
+      background: #c9a96e;
+    }
+
+    /* Hide scrollbar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transition: all 0.3s ease;
+    }
+
+    
